@@ -1,0 +1,189 @@
+/*  Dans la balise style, on definit les styles de la page : dans la balise style, on definit les styles de la page :
+         background-color: couleur de fond
+        font-family: police de caractères
+        margin: marges extérieures de la page 
+        .......
+             
+    Sélecteurs CSS (ID, class, pseudo-classe):
+        on place les sélecteurs dans la balise style, pour dire quelle partie de la page on veut modifier.
+            
+            - id -> un identifiant unique, déstiné à un seul element, plus spécifique(prioritaire en cas de conflit)            
+            - class -> destiné à plusieurs elements, moins spécifique que l'id, idéal pour pour la plupart des styles communs.            
+            - pseudo-classe -> Une pseudo-classe en CSS est un mot-clé ajouté à un sélecteur qui permet de styliser un élément 
+                en fonction de son état ou de son positionnement dans le DOM, sans modifier directement le HTML. 
+                Elle sert à appliquer des styles basés sur des critères spécifiques, comme un élément survolé, 
+                un élément actif, ou même des éléments impairs dans une liste.
+                
+                Exemples de pseudo-classe:
+                :hover -> survol S'applique lorsqu'un utilisateur survole un élément avec la souris.
+                :active -> clic  S'applique lorsqu'un élément est cliqué.
+                :focus -> focus  S'applique à un élément en focus (exemple : une case à remplir active).
+                :visited -> lien visité par le visiteur 
+                :first-child -> Cible le premier enfant d'un parent.
+                :last-child ->  Cible le dernier enfant d'un parent.
+                :nth-child(2) -> deuxieme enfant de la liste 
+                :nth-child(2n) -> tous les deux enfants de la liste 
+                :nth-child(2n+1) -> tous les deux enfants de la liste +1 (2,4,6,8...) 
+                :nth-child(2n-1) -> tous les deux enfants de la liste -1 (1,3,5,7...) 
+                :valid : Cible un champ de formulaire qui contient une valeur valide.
+                :not(selector) : Exclut les éléments qui correspondent au sélecteur spécifié. 
+                :first-of-type / :last-of-type : Cible respectivement le premier ou le dernier élément d'un type spécifique parmi ses frères.
+                :empty : Cible les éléments qui n'ont pas d'enfant.
+            
+            par exemple:
+                - id="categorie" -> modifier la balise p avec l'id="categorie" 
+                - class ->
+                - pseudo-classe ->   
+            */
+* {
+    overflow: auto ;
+}
+body {
+    background-color: #8BA1BB;  
+    font-family: Arial;
+    margin: 0;
+    }
+div.contenu {
+    background-color: white;
+    margin: 10px 10% 80px 10%;
+    padding:0px 30px 30px 30px; 
+    min-width: 350px;
+    box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.1);
+    overflow: visible;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 12px;
+    margin-top: 10px;
+}
+p.description {
+    text-align: center;
+    max-width: 400px;
+    display: inline-block;
+    font-size: 14px;
+}
+.centre {
+    text-align: center;
+    width: 100%;
+}
+p.categorie {
+    background-color: black;
+    color: white;
+    display: inline-block;
+    margin-top: -15px;
+    padding: 8px 18px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: 16px;
+}           
+div.categorie {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    overflow: visible;
+}
+div.separateur {
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;     
+}
+div.info {
+    position: relative;
+}
+table.info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    background-color: #6C829DC0;
+    height: 10%;
+    /*font-size: 14px;*/
+}
+table.info td {
+    font-size: 10px;
+    text-align: center; 
+    vertical-align:top;
+}
+table.info th {
+    font-size: 16px;
+    vertical-align: bottom;
+    padding-bottom: 8px;
+}
+img.info {
+    display: block;
+    max-height: 400px;
+    object-fit: cover;
+    min-height: 200px;
+    background-color: lightgray;
+}
+div.colonne {
+    width: 45%;
+    margin-top: 20px;
+}
+div.colonne h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-bottom: 5px solid #6C829D;
+    padding-bottom: 5px;
+}
+div.colonne1 {
+    display: inline-block;
+    /*background-color: lightblue;*/
+    margin-right: 10%
+}
+div.colonne2 {
+    float: right;
+}
+div.ingredients p {
+    text-align: center;
+    font-size: 14px;                        
+    border: 1px solid lightgray;
+    padding: 8px 0px;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+table.preparation p.numero {
+    background-color: #6C829D;
+    color: white;
+    font-size: 14px;  
+    font-weight: bold;
+    text-align: center;
+    width: 25px;   
+    height: 25px; 
+    padding-top: 4px;   
+    box-sizing: border-box;  
+    border-radius: 50%; 
+    margin: 0;            
+}    
+table.preparation p {
+    font-size: 14px;
+    text-align: justify;
+}                                                   
+table.preparation td {                            
+    vertical-align: top;
+}
+table.preparation td.preparation_etapes {
+    font-size: 14px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+table.preparation tr {
+    height: 40px;
+}
+
+    /*
+div.etapes p.numero {
+    color: #6C829D;
+    margin: 0;
+    font-size: 36px;                        
+}    
+div.etapes p {
+    font-size: 14px;
+    text-align: justify;
+}                                                   
+div.etapes div {                            
+    margin-bottom: 40px;
+}                                                                                                                                                           
+*/
